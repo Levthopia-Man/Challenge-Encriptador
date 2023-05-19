@@ -1,0 +1,333 @@
+body{
+    min-width: none;
+    overflow: visible;
+    background-image: url(imagines/fondotec.png)
+}
+.Encabezado{
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    top: 0;
+    padding: 1% 1.5% 1% 0;
+    text-align: center ;
+    font-size: 34px;
+    font-weight:bold;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: rgba(237, 237, 237, 0.80);
+    font-family: 'Inconsolata', monospace;
+}
+.Logo{
+    position: absolute;
+    padding-top: 4px;
+    right: 20px;
+    left: 40px;
+}
+main {
+    width: 90%;
+    height: 100%;
+    margin: 5.5% auto 1.5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.Primer-cuadro {
+    display: flex;
+    width: 43%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em 0.5em 0.75em 1%;
+}
+#Entrada {
+    position: relative;
+    width: 91.5%;
+    height: 15em;
+    padding: 0.6em;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px black;
+    text-align: top;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8em;
+    color: rgb(244, 255, 255);
+    resize: none;
+    margin-bottom: 0%;
+} 
+.Aviso {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1em;
+    color: rgba(234, 234, 234, 0.95);
+    padding: 5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+.Boton-aux1 {
+    margin-top: auto;
+}
+.Bot-Bor{
+    padding: 0.5em 2.5em;
+    color: white;
+    background-color: #00043bb3;
+    border-radius: 10px;
+    border-color: rgba(243, 243, 243, 0.922);
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.Bot-Bor:hover {
+    transform: scale(1.15);
+    background-color: rgb(3, 0, 45);
+    border-radius: 20px;
+} 
+.Botones-princ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 21em;
+    padding: 0 1% 1.4% 1%;
+
+} 
+.Botones-princ .Bot-Encrip{
+    display: block;
+    margin: 8% 0%;
+    padding: 0.5em 1.25em;
+    color: white;
+    background-color: #000214d9;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 10px 10px 9px black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.75em;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease;
+}
+.Bot-Encrip:hover {
+    transform: scale(1.15);
+    background-color: rgb(0, 1, 22);
+    border-radius: 18px;
+}
+.Botones-princ .Bot-Desn{
+    display: block;
+    margin: 8% 0%;
+    padding: 0.5em 0.55em;
+    color: white;
+    background-color: #000214d9;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 10px 10px 9px black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.75em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.Bot-Desn:hover {
+    transform: scale(1.15);
+    background-color: rgb(0, 1, 22);
+    border-radius: 18px;
+}  
+.Segundo-cuadro {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-content: center;
+    align-items:center;
+    justify-content: flex-start;
+    margin: 0.5em 0.5em 0 0.3em;
+}
+#Salida {
+    position: relative;
+    width: 85%;
+    height: 15em;
+    padding: 0.6em;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px black;
+    text-align: top;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8em;
+    background-position: center;
+    color: rgb(244, 255, 255);
+    resize: none;
+    margin-bottom: 0.5em;
+}
+.Robot {
+    height: 25em;
+    position: absolute;
+    transition: all 0.1s step-end;
+    margin-top: 1.5%;
+} 
+.Boton-aux2 {
+    margin-top: auto;
+}
+.Bot-Cop{
+    padding: 0.5em 2.5em;
+    color: white;
+    background-color: #00043bb3;
+    border-radius: 10px;
+    border-color: white;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5em;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.Bot-Cop:hover {
+    transform: scale(1.15);
+    background-color: rgb(3, 0, 45);
+    border-radius: 20px;
+}
+footer{
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+footer ul li{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+footer ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+footer ul li p{
+    display: inline;
+    padding: 6px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.1em;
+    color: white;
+}
+footer ul li:last-child {
+    margin-right: 0;
+}
+.Redes{
+    height: 2.35em;
+    width: 2.35em;
+}
+
+@media screen and (max-width: 1441px) {
+    html{
+        min-height: 1280px;
+        max-height: 3130px;
+    }
+    body{
+        display: flex;
+        min-width: none;
+        overflow: visible;
+    }
+    .Encabezado{
+        width: 100%;
+        height: 7%;
+        top: 0;
+        padding: 1% 1.5% 1% 0;
+        background-color: rgba(0, 0, 0, 0.65);
+        color: rgba(237, 237, 237, 0.80);
+        font-family: 'Inconsolata', monospace;
+        font-size: 4em;
+    }
+    .Logo{
+        display: flex;
+        margin: 0.5em;
+        position: absolute;
+        padding-top: 4px;
+        right: 20px;
+        left: 40px;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    main {
+        width: 90%;
+        height: 100%;
+        margin: 25% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: flex-start;
+    }
+    .Primer-cuadro {
+        flex-basis: 100%;
+        width: 90%;
+        display: flex;
+    }
+    #Entrada {
+        font-size: 3.5em;
+        height: 9.5em;
+        padding: 0.5em;
+    }
+    .Aviso {
+        font-size: 1.8em;
+        padding: 5px;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+    .Bot-Bor{
+        padding: 0.7em 2.25em;
+        font-size: 3em;
+    }
+    .Botones-princ {
+        height: 18em;
+        padding: 1.5% 0 2.75% 0;
+    }
+    .Botones-princ .Bot-Encrip{
+        margin: 4%;
+        padding: 0.6em 2em;
+        font-size: 3.2em;
+    }
+    .Botones-princ .Bot-Desn{
+        margin: 4%;
+        padding: 0.6em 1.2em;
+        font-size: 3.2em;
+    }
+    .Segundo-cuadro {
+        flex-basis: 100%;
+        width: 90%;
+        display: flex;
+    }
+    #Salida {
+        font-size: 3.5em;
+        height: 9em;
+        padding: 0.5em;
+        margin-bottom: 0;
+    }
+    .Bot-Cop{
+        padding: 0.7em 2.1em;
+        font-size: 3em;
+        margin-top: 1em;
+    }
+    .Robot {
+        height: 30em;
+    } 
+    footer ul li p{
+        padding: 6px;
+        font-size: 1.5em;
+    }
+    .Redes{
+        height: 5em;
+        width: 5em;
+    }
+}

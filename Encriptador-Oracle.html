@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-419">
+    <head>
+        <meta charset="UTF-8">
+        <title>ENCRIPTADOR</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <div class="Encabezado">
+                <img class="Logo" src="imagines/Vector.png" height="50%">
+                <h1>E N C R I P T A D O R</h1>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="Primer-cuadro">
+                <textarea type="textarea" id="Entrada" required placeholder="Escriba su mensaje a encriptar o encriptado"></textarea>
+
+                <div class="Aviso">
+                    <p>No se admite mayúsculas y caracteres especiales</p>
+                </div>
+                      
+                <div class="Boton-aux1">
+                    <button type="button" onclick="borrartex()" class="Bot-Bor"> Borrar </button>
+                </div>
+            </section>
+
+            <section class="Botones-princ">
+                <button type="button" onclick="encriptar()" class="Bot-Encrip"> Encriptar </button>
+                <button type="button" onclick="desencriptar()" class="Bot-Desn"> Desencriptar </button>
+            </section>
+
+            <section class="Segundo-cuadro">
+                <textarea readonly="readonly" id="Salida"></textarea>
+
+                <img class="Robot" src="imagines/white_robot.png">
+
+                <div class="Boton-aux2">
+                    <button type="button" onclick="copiartex()" class="Bot-Cop"> Copiar </button>
+                </div>
+
+            </section>
+
+            <script>
+
+                var letras = {
+                "a": "ai",
+                "e": "enter",
+                "i": "imes",
+                "o": "ober",
+                "u": "ufat"
+                };
+
+                var ingresocorrecto = new RegExp(letras[letra].toLowerCase(), 'g');
+
+                function ocultarImagen() {
+                    var imagen = document.querySelector(".Robot");
+                    imagen.style.visibility = "hidden";
+                }
+
+                function mostrarImagen() {
+                    var imag = document.querySelector(".Robot");
+                    imag.style.visibility = "visible";
+                }
+
+                function encriptar() {
+                    var texto = document.getElementById("Entrada").value;
+                    if(/^[a-z ]+$/.test(texto)) {
+                        var resultado = texto.replace(/[aeiou]/g, function(letra) {
+                        return letras[letra]; 
+                        });
+                        document.getElementById("Salida").value = "";
+                        ocultarImagen();
+                        document.getElementById("Salida").value = resultado;   
+                    } else{
+                        document.getElementById("Salida").value = "";
+                        mostrarImagen();
+                    }
+                }
+
+                function desencriptar() {
+                    var texto = document.getElementById("Entrada").value;
+                    if (/^[a-z ]+$/.test(texto)) {
+                        for (var letra in letras) {
+                            if (letras.hasOwnProperty(letra)) {
+                            var ingresocorrecto = new RegExp(letras[letra], 'g');
+                            texto = texto.replace(ingresocorrecto, letra);
+                            }
+                        }
+                        document.getElementById("Salida").value = "";
+                        ocultarImagen();
+                        document.getElementById("Salida").value = texto;
+                        } else {
+                        document.getElementById("Salida").value = "";
+                        mostrarImagen();
+                        }
+                }
+
+                function copiartex(){
+                        var textoACopiar = document.getElementById("Salida").value;
+                        navigator.clipboard.writeText(textoACopiar)
+                }
+
+                function borrartex(){
+                        document.getElementById("Entrada").value = "";
+                }
+
+            </script>
+
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/ethan.winstonhaliev.1" target="_blank">
+                        <img class="Redes" src="imagines/facebook.png">
+                        <p>William M Leiva</p>
+                    </a>   
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/william_leiva12/" target="_blank">
+                        <img class="Redes" src="imagines/instagram.png"> 
+                        <p>William_leiva12</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/william-m-leiva-rojas-b75b46163/" target="_blank">
+                        <img class="Redes" src="imagines/linkedin.png"> 
+                        <p>William M Leiva Rojas</p>
+                    </a>                    
+                </li>
+                <li>
+                    <a href="https://github.com/Levthopia-Man" target="_blank">
+                        <img class="Redes" src="imagines/Github.png">  
+                        <p>William M Leiva Rojas</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+    </body>
+
+</html>
